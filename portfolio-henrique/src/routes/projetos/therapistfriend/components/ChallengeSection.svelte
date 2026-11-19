@@ -1,4 +1,9 @@
-<section class="content-section problem-section" id="contexto">
+<script lang="ts">
+  import { reveal } from '#lib/actions/reveal.ts';
+
+</script>
+
+<section class="content-section problem-section" id="contexto" use:reveal>
   <div class="section-heading">
     <span class="section-label">01 — CONTEXTO</span>
     <h2>

@@ -5,9 +5,11 @@
   const closeMenu = () => {
     menuOpen = false;
   };
+
+  import { reveal } from '#lib/actions/reveal.ts';
 </script>
 
-<header class="navbar">
+<header class="navbar" use:reveal>
   <div class="container navbar-content">
     <a href="#inicio" class="logo" onclick={closeMenu}>
       HENRIQUE<span>.</span>

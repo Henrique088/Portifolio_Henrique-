@@ -1,5 +1,10 @@
+<script lang="ts">
+  import { reveal } from '#lib/actions/reveal.ts';
 
-<section class="security-section" id="seguranca">
+</script>
+
+
+<section class="security-section" id="seguranca" use:reveal>
   <div class="section-container">
     <div class="section-heading">
       <span class="eyebrow">04 — SEGURANÇA DA APLICAÇÃO</span>

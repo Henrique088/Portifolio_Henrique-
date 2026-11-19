@@ -1,5 +1,9 @@
+<script lang="ts">
+  import { reveal } from '#lib/actions/reveal.ts';
 
-<header class="project-nav">
+</script>
+
+<header class="project-nav" use:reveal>
   <a href="/" class="brand" aria-label="Voltar ao início">
     H<span>.</span>
   </a>

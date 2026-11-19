@@ -1,4 +1,9 @@
-<section class="learning-section" id="aprendizados">
+<script lang="ts">
+  import { reveal } from '#lib/actions/reveal.ts';
+
+</script>
+
+<section class="learning-section" id="aprendizados" use:reveal>
   <div class="learning-container">
     <div class="learning-heading">
       <span class="section-label">08 — EXPERIÊNCIA CONSTRUÍDA</span>

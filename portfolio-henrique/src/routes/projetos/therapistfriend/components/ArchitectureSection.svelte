@@ -1,5 +1,9 @@
+<script lang="ts">
+  import { reveal } from '#lib/actions/reveal.ts';
 
-<section class="architecture-section" id="arquitetura">
+</script>
+
+<section class="architecture-section" id="arquitetura"  use:reveal>
   <div class="container">
     <div class="section-heading">
       <span class="eyebrow">03 / ARQUITETURA DE SOFTWARE</span>

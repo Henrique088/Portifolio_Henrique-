@@ -1,4 +1,9 @@
-<footer class="project-footer">
+<script lang="ts">
+  import { reveal } from '#lib/actions/reveal.ts';
+
+</script>
+
+<footer class="project-footer" use:reveal>
   <div class="footer-container">
     <div class="footer-content">
       <span class="footer-label">FIM DO PROJETO</span>

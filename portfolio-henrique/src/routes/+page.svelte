@@ -4,6 +4,7 @@
   import Hero from '#lib/components/Hero.svelte';
   import About from '#lib/components/About.svelte';
   import Projects  from '#lib/components/Projects.svelte';
+  import Contact from '#lib/components/Contact.svelte';
 </script>
 
 <svelte:head>
@@ -24,34 +25,9 @@
 
   <Projects />
 
-  <section id="contato" class="placeholder">
-    <div class="container">
-      <span>04 / CONTATO</span>
-      <h2>Vamos construir algo juntos?</h2>
-    </div>
-  </section>
+  <Contact />
 </main>
 
 <style>
-  .placeholder {
-    padding-block: 110px;
-    border-top: 1px solid var(--color-border);
-  }
-
-  .placeholder span {
-    color: var(--color-primary);
-    font-size: 11px;
-    letter-spacing: 1.5px;
-  }
-
-  .placeholder h2 {
-    margin-top: 25px;
-    font-family: var(--font-heading);
-    font-size: clamp(30px, 5vw, 48px);
-  }
-
-  .placeholder p {
-    margin-top: 15px;
-    color: var(--color-muted);
-  }
+  
 </style>

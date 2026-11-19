@@ -1,9 +1,14 @@
+<script lang="ts">
+  import { reveal } from '#lib/actions/reveal.ts';
 
-<section id="sobre" class="about-section">
+</script>
+<section id="sobre" class="about-section" use:reveal>
   <div class="container">
     <div class="section-header">
       <span class="eyebrow">01 / SOBRE MIM</span>
-      <h2>Mais do que código.<br />
+
+      <h2>
+        Mais do que código.<br />
         <span>Construção de soluções.</span>
       </h2>
     </div>
@@ -11,37 +16,40 @@
     <div class="about-content">
       <div class="about-intro">
         <span class="about-symbol">H.</span>
+
         <p class="intro-text">
-          Sou desenvolvedor de software e gosto de transformar ideias
-          em aplicações funcionais, bem estruturadas e pensadas para
-          resolver problemas reais.
+          Acredito que desenvolver software vai além de escrever código:
+          é compreender problemas, estruturar ideias e transformá-las
+          em soluções funcionais.
         </p>
       </div>
 
       <div class="about-details">
         <p>
-          Tenho interesse especial em arquitetura de software,
-          desenvolvimento backend e integração de tecnologias.
-          Ao longo dos meus projetos, busco unir organização,
-          qualidade de código e uma boa experiência para quem utiliza
-          o produto.
+          Sou desenvolvedor de software com interesse especial em
+          arquitetura de sistemas e desenvolvimento backend. Gosto de
+          trabalhar na construção de aplicações bem estruturadas,
+          explorando organização de código, separação de responsabilidades
+          e integração entre diferentes tecnologias.
         </p>
 
         <p>
-          Também exploro aplicações de inteligência artificial e
-          tecnologias em tempo real, sempre procurando entender
-          como diferentes ferramentas podem trabalhar juntas para
-          construir soluções completas.
+          Ao longo dos meus projetos, também desenvolvi experiências com
+          inteligência artificial, processamento assíncrono e comunicação
+          em tempo real. Busco compreender como essas tecnologias podem
+          trabalhar em conjunto para criar aplicações completas e
+          proporcionar boas experiências aos usuários.
         </p>
 
         <div class="about-focus">
           <span>ÁREAS DE INTERESSE</span>
+
           <div class="focus-list">
             <span>Arquitetura de software</span>
-            <span>Backend</span>
+            <span>Backend e APIs</span>
             <span>Inteligência artificial</span>
-            <span>Aplicações web</span>
-            <span>Tecnologias em tempo real</span>
+            <span>Desenvolvimento web</span>
+            <span>Sistemas em tempo real</span>
           </div>
         </div>
       </div>
@@ -149,6 +157,14 @@
     border-radius: 6px;
     color: var(--color-muted);
     font-size: 12px;
+    transition:
+      border-color 0.2s ease,
+      color 0.2s ease;
+  }
+
+  .focus-list span:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
   }
 
   @media (max-width: 750px) {
@@ -167,6 +183,12 @@
 
     .about-intro {
       gap: 25px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .focus-list span {
+      transition: none;
     }
   }
 </style>

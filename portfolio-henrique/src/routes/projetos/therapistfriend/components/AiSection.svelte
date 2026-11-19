@@ -1,5 +1,10 @@
+<script lang="ts">
+  import { reveal } from '#lib/actions/reveal.ts';
 
-<section class="ai-section" id="inteligencia-artificial">
+</script>
+
+
+<section class="ai-section" id="inteligencia-artificial" use:reveal>
   <div class="section-container">
     <div class="section-heading">
       <span class="eyebrow">05 — INTELIGÊNCIA ARTIFICIAL</span>

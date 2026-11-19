@@ -1,4 +1,9 @@
-<section class="technologies-section" id="tecnologias">
+<script lang="ts">
+  import { reveal } from '#lib/actions/reveal.ts';
+
+</script>
+
+<section class="technologies-section" id="tecnologias" use:reveal>
   <div class="technologies-container">
     <div class="section-heading">
       <span class="section-label">07 — TECNOLOGIAS</span>

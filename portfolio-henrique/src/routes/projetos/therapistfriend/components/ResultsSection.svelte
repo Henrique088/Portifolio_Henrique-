@@ -1,3 +1,5 @@
+
+
 <script lang="ts">
 	const screenshots = [
 		{
@@ -80,12 +82,15 @@
 			document.body.style.overflow = originalOverflow;
 		};
 	});
+
+  import { reveal } from '#lib/actions/reveal.ts';
+
 </script>
 
 <!-- Permite fechar o zoom pressionando a tecla ESC -->
 <svelte:window onkeydown={handleKeydown} />
 
-<section class="results-section" id="resultados">
+<section class="results-section" id="resultados" use:reveal>
 	<div class="section-container">
 		<div class="section-heading">
 			<span class="eyebrow">06 — RESULTADOS E APRENDIZADOS</span>

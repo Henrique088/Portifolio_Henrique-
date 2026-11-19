@@ -1,4 +1,9 @@
-<section class="solution-section" id="solucao">
+<script lang="ts">
+  import { reveal } from '#lib/actions/reveal.ts';
+
+</script>
+
+<section class="solution-section" id="solucao" use:reveal>
   <div class="solution-container">
     <div class="solution-header">
       <span class="section-label">02 — A SOLUÇÃO</span>

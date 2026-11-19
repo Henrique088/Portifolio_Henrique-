@@ -1,4 +1,9 @@
-<section class="project-facts">
+<script lang="ts">
+  import { reveal } from '#lib/actions/reveal.ts';
+
+</script>
+
+<section class="project-facts" use:reveal>
   <div class="fact">
     <span class="fact-label">CATEGORIA</span>
     <strong>Saúde e Tecnologia</strong>

@@ -1,5 +1,9 @@
+<script lang="ts">
+  import { reveal } from '#lib/actions/reveal.ts';
 
-<section class="events-section" id="eventos">
+</script>
+
+<section class="events-section" id="eventos" use:reveal>
   <div class="section-container">
     <div class="section-heading">
       <span class="eyebrow">03 — EVENTOS E PROCESSAMENTO</span>

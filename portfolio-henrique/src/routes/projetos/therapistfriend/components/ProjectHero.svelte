@@ -1,4 +1,9 @@
-<section class="project-hero" id="visao-geral">
+<script lang="ts">
+  import { reveal } from '#lib/actions/reveal.ts';
+
+</script>
+
+<section class="project-hero" id="visao-geral" use:reveal>
   <div class="hero-content">
     <span class="eyebrow">
       PROJETO EM DESTAQUE
