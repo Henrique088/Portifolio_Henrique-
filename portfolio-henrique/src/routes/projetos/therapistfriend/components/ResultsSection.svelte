@@ -1,5 +1,3 @@
-
-
 <script lang="ts">
 	const screenshots = [
 		{
@@ -83,8 +81,7 @@
 		};
 	});
 
-  import { reveal } from '#lib/actions/reveal.ts';
-
+	import { reveal } from '#lib/actions/reveal.ts';
 </script>
 
 <!-- Permite fechar o zoom pressionando a tecla ESC -->
@@ -93,7 +90,7 @@
 <section class="results-section" id="resultados" use:reveal>
 	<div class="section-container">
 		<div class="section-heading">
-			<span class="eyebrow">06 — RESULTADOS E APRENDIZADOS</span>
+			<span class="eyebrow">08 — RESULTADOS E APRENDIZADOS</span>
 			<h2>Uma ideia transformada<br /><span>em uma aplicação real.</span></h2>
 			<p>
 				O desenvolvimento do TherapistFriend resultou em uma plataforma web que integra diferentes
@@ -110,8 +107,12 @@
 		</div>
 
 		<div class="screenshot-grid">
-			{#each screenshots as screenshot}
-				<article class="screenshot-card">
+			{#each screenshots as screenshot (screenshot.number)}
+				<article
+					class="screenshot-card"
+					use:reveal
+					style={`--card-index: ${Number(screenshot.number) - 1}`}
+				>
 					<div class="screenshot-frame">
 						<div class="browser-bar">
 							<div class="browser-dots">
@@ -151,8 +152,8 @@
 		<div class="gallery-tip">
 			<span class="tip-icon">i</span>
 			<p>
-				As áreas acima são espaços reservados. Substitua cada uma por uma captura real da aplicação
-				para apresentar evidências visuais do desenvolvimento.
+				As capturas apresentam diferentes áreas do TherapistFriend. Clique em qualquer imagem para
+				ampliar e visualizar os detalhes da interface.
 			</p>
 		</div>
 
@@ -167,8 +168,12 @@
 			</div>
 
 			<div class="highlights-grid">
-				{#each highlights as item}
-					<article class="highlight-item">
+				{#each highlights as item (item.number)}
+					<article
+						class="highlight-item"
+						use:reveal
+						style={`--card-index: ${Number(item.number) - 1}`}
+					>
 						<span>{item.number}</span>
 						<h4>{item.title}</h4>
 						<p>{item.description}</p>
@@ -177,7 +182,7 @@
 			</div>
 		</div>
 
-		<div class="feedback-section">
+		<div class="feedback-section" use:reveal>
 			<div class="feedback-symbol">✳</div>
 			<div>
 				<span class="sub-eyebrow">VALIDAÇÃO DAS IDEIAS</span>
@@ -190,7 +195,7 @@
 			</div>
 		</div>
 
-		<div class="final-statement">
+		<div class="final-statement" use:reveal>
 			<span class="sub-eyebrow">O QUE FICOU DO PROJETO</span>
 			<h3>
 				Construir software também é compreender problemas, tomar decisões e conectar diferentes
@@ -220,7 +225,6 @@
 
 <style>
 	.results-section {
-		
 		padding: 112px 0;
 		background: #17251e;
 		color: #f5f8f3;
@@ -299,6 +303,13 @@
 
 	.screenshot-card {
 		min-width: 0;
+		border-radius: 14px;
+
+		transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+	}
+
+	.screenshot-card:hover {
+		transform: translateY(-6px);
 	}
 
 	.screenshot-frame {
@@ -307,13 +318,24 @@
 		border-radius: 14px;
 		background: #f1f5ef;
 		box-shadow: 0 8px 24px #17251e0a;
+		transition:
+			border-color 0.35s ease,
+			box-shadow 0.35s ease;
+	}
+
+	.screenshot-card:hover .screenshot-frame {
+		border-color: #a8d6a1;
+		box-shadow: 0 18px 35px rgb(0 0 0 / 16%);
 	}
 
 	.screenshot-image {
 		display: block;
 		width: 100%;
+		max-width: 100%;
 		/* aspect-ratio: 16 / 10; */
 		object-fit: cover;
+
+		transition: transform 0.65s cubic-bezier(0.2, 0.8, 0.2, 1);
 	}
 
 	.browser-bar {
@@ -398,11 +420,24 @@
 		font-family: 'Space Grotesk', sans-serif;
 		font-size: 0.85rem;
 		font-weight: 700;
+		transition:
+			transform 0.3s ease,
+			color 0.3s ease;
+	}
+
+	.screenshot-card:hover .screenshot-number {
+		transform: translateX(4px);
+		color: #b8ef6b;
 	}
 
 	.screenshot-info h4 {
 		font-family: 'Space Grotesk', sans-serif;
 		font-size: 1.05rem;
+		transition: color 0.3s ease;
+	}
+
+	.screenshot-card:hover .screenshot-info h4 {
+		color: #b8ef6b;
 	}
 
 	.screenshot-info p {
@@ -466,12 +501,26 @@
 	.highlight-item {
 		padding-top: 20px;
 		border-top: 1px solid #dce5dc;
+
+		transition:
+			transform 0.35s ease,
+			border-color 0.35s ease;
+	}
+
+	.highlight-item:hover {
+		transform: translateY(-5px);
+		border-color: #398c4e;
 	}
 
 	.highlight-item > span {
 		color: #398c4e;
 		font-size: 0.75rem;
 		font-weight: 700;
+		transition: color 0.3s ease;
+	}
+
+	.highlight-item:hover > span {
+		color: #b8ef6b;
 	}
 
 	.highlight-item h4 {
@@ -479,6 +528,11 @@
 		font-family: 'Space Grotesk', sans-serif;
 		font-size: 1.05rem;
 		letter-spacing: -0.025em;
+		transition: color 0.3s ease;
+	}
+
+	.highlight-item:hover h4 {
+		color: #b8ef6b;
 	}
 
 	.highlight-item p {
@@ -509,6 +563,14 @@
 		background: #d7f2d2;
 		color: #398c4e;
 		font-size: 1.5rem;
+		transition:
+			transform 0.35s ease,
+			background 0.35s ease;
+	}
+
+	.feedback-section:hover .feedback-symbol {
+		transform: rotate(12deg) scale(1.08);
+		background: #b8ef6b;
 	}
 
 	.feedback-section h3 {
@@ -532,6 +594,14 @@
 		border-radius: 22px;
 		background: #17251e;
 		color: #f5f8f3;
+		transition:
+			background 0.4s ease,
+			transform 0.4s ease;
+	}
+
+	.final-statement:hover {
+		background: #20372a;
+		transform: translateY(-4px);
 	}
 
 	.final-statement .sub-eyebrow {
@@ -558,9 +628,21 @@
 	.zoom-trigger {
 		background: none;
 		border: none;
+		width: 100%;
 		padding: 0;
 		cursor: zoom-in;
-		display: inline-block;
+		display: block;
+		background: none;
+		cursor: zoom-in;
+	}
+
+	.zoom-trigger:hover .screenshot-image {
+		transform: scale(1.035);
+	}
+
+	.zoom-trigger:focus-visible {
+		outline: 3px solid #398c4e;
+		outline-offset: -3px;
 	}
 
 	.screenshot-image {
@@ -595,6 +677,19 @@
 		object-fit: contain;
 		border-radius: 8px;
 		box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+		animation: imageZoom 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+	}
+
+	@keyframes imageZoom {
+		from {
+			opacity: 0;
+			transform: scale(0.94);
+		}
+
+		to {
+			opacity: 1;
+			transform: scale(1);
+		}
 	}
 
 	.lightbox-hint {
@@ -647,6 +742,25 @@
 		.final-statement {
 			margin-top: 65px;
 			padding: 30px 24px;
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.screenshot-card,
+		.screenshot-frame,
+		.screenshot-image,
+		.screenshot-number,
+		.screenshot-info h4,
+		.highlight-item,
+		.highlight-item > span,
+		.highlight-item h4,
+		.feedback-section,
+		.feedback-symbol,
+		.final-statement,
+		.lightbox-image {
+			transition: none !important;
+			animation: none !important;
+			transform: none !important;
 		}
 	}
 </style>

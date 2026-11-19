@@ -6,7 +6,7 @@
 <section class="technologies-section" id="tecnologias" use:reveal>
   <div class="technologies-container">
     <div class="section-heading">
-      <span class="section-label">07 — TECNOLOGIAS</span>
+      <span class="section-label">09 — TECNOLOGIAS</span>
 
       <h2>
         Uma stack construída para
