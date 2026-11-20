@@ -5,6 +5,7 @@
   import About from '#lib/components/About.svelte';
   import Projects  from '#lib/components/Projects.svelte';
   import Contact from '#lib/components/Contact.svelte';
+  import OtherProjects from '#lib/components/OtherProjects.svelte';
 </script>
 
 <svelte:head>
@@ -24,8 +25,12 @@
   <About />
 
   <Projects />
-
+  
+  <OtherProjects />
+  
   <Contact />
+
+
 </main>
 
 <style>

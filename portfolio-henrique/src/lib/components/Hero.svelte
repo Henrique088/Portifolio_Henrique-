@@ -1,10 +1,7 @@
-
-
 <script lang="ts">
 	const technologies = ['TypeScript', 'React', 'Node.js', 'Python', 'PostgreSQL'];
-    
-    import { reveal } from '#lib/actions/reveal.ts';
 
+	import { reveal } from '#lib/actions/reveal.ts';
 </script>
 
 <section id="inicio" class="hero" use:reveal>
@@ -210,6 +207,14 @@
 		padding: 7px 10px;
 		color: #c6c8ce;
 		font-size: 11px;
+		transition:
+			border-color 0.2s ease,
+			color 0.2s ease;
+	}
+
+	.tech-list span:hover {
+		border-color: var(--color-primary);
+		color: var(--color-primary);
 	}
 
 	/* Composição gráfica */

@@ -6,7 +6,7 @@
 <section id="contato" class="contact-section" use:reveal>
   <div class="container">
     <div class="section-header">
-      <span class="section-number">03 / CONTATO</span>
+      <span class="section-number">04 / CONTATO</span>
       <span class="section-label">VAMOS CONVERSAR</span>
     </div>
 
