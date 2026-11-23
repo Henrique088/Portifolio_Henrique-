@@ -27,6 +27,7 @@
     <nav class:open={menuOpen}>
       <a href="#inicio" onclick={closeMenu}>Início</a>
       <a href="#sobre" onclick={closeMenu}>Sobre</a>
+      <a href="/sobre">Sobre mim</a>
       <a href="#projetos" onclick={closeMenu}>Projetos</a>
       <a href="#contato" class="contact-link" onclick={closeMenu}>
         Vamos conversar <span>↗</span>
