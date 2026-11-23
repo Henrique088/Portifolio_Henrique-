@@ -21,24 +21,24 @@
           que envolvam tecnologia e desenvolvimento de software.
         </p>
 
-        <a href="mailto:SEU_EMAIL" class="contact-email">
+        <a href="mailto:henriqueribeiro88bb@gmail.com" class="contact-email">
           <span>Entre em contato</span>
           <span class="arrow">↗</span>
         </a>
       </div>
 
       <div class="contact-links">
-        <a href="https://github.com/SEU_USUARIO" target="_blank" rel="noreferrer">
+        <a href="https://github.com/Henrique088" target="_blank" rel="noreferrer">
           <span>GitHub</span>
           <span>↗</span>
         </a>
 
-        <a href="https://www.linkedin.com/in/SEU_USUARIO/" target="_blank" rel="noreferrer">
+        <a href="https://www.linkedin.com/in/henrique-ribeiro-dev/" target="_blank" rel="noreferrer">
           <span>LinkedIn</span>
           <span>↗</span>
         </a>
 
-        <a href="mailto:SEU_EMAIL">
+        <a href="mailto:henriqueribeiro88bb@gmail.com">
           <span>E-mail</span>
           <span>↗</span>
         </a>

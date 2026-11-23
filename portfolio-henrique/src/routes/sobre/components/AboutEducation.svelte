@@ -3,7 +3,7 @@
   import { reveal } from '#lib/actions/reveal.ts';
 </script>
 
-<section class="education-section" use:reveal>
+<section class="education-section" id= "minha-historia" use:reveal>
   <div class="education-container">
     <div class="section-heading">
       <span class="section-number">01 / FORMAÇÃO</span>
@@ -47,8 +47,7 @@
 
         <div class="card-main">
           <div class="institution-symbol">
-            <span>IF</span>
-            <span>MG</span>
+            <img src="/images/sobre/logo.png" alt="Instituto Federal de Minas Gerais" class="institution-logo" />
           </div>
 
           <div class="degree-info">
@@ -255,11 +254,17 @@
     line-height: 1;
   }
 
-  .institution-symbol span:last-child {
+  .institution-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* .institution-symbol span:last-child {
     margin-top: 4px;
     font-size: 11px;
     letter-spacing: 3px;
-  }
+  } */
 
   .degree-info h3 {
     font-family: var(--font-heading);
